@@ -1,24 +1,35 @@
 import random
-number = int(random.randint(1, 10))
+calc = int(random.randint(1, 10))
+out = str()
 
 
-class SEEKER:
-    @staticmethod
-    def seek():
-        answer = int(0)
-        while answer != number:
-            guess = int(input('Угадай число между 1 и 10: \n'))
-            answer = guess
+class GAME:
+    def __init__(self):
+        val = str(out)
+        guess = int()
+        number = int(calc)
+        counter = int(calc)
+
+    @classmethod
+    def output(cls, val):
+        print(val)
+
+    @classmethod
+    def validate(cls, number):
+        guess = int
+        while guess != number:
+            guess = int(input('\nУгадай число между 1 и 10: \n'))
             if guess < number:
-                print('\nТвое число меньше загаданного.')
-                continue
+                val = '\nТвое число меньше загаданного.'
+                cls.output(val)
             if guess > number:
-                print('\nТвое число больше загаданного.')
-                continue
+                val = '\nТвое число больше загаданного.'
+                cls.output(val)
             if guess == number:
-                print('\nУгадал!')
-                break
+                val = '\nУгадал!'
+                cls.output(val)
 
 
-c = SEEKER()
-c.seek()
+c = GAME()
+c.validate(calc)
+c.output(out)
