@@ -6,9 +6,7 @@ out = str()
 class GAME:
     def __init__(self):
         val = str(out)
-        guess = int()
         number = int(calc)
-        counter = int(calc)
 
     @classmethod
     def output(cls, val):
