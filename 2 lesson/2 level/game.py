@@ -1,12 +1,14 @@
 import random
 number = int(random.randint(1, 10))
+
+
 class SEEKER:
     @staticmethod
     def seek():
-        answ = int(0)
-        while answ != number:
+        answer = int(0)
+        while answer != number:
             guess = int(input('Угадай число между 1 и 10: \n'))
-            answ = guess
+            answer = guess
             if guess < number:
                 print('\nТвое число меньше загаданного.')
                 continue
