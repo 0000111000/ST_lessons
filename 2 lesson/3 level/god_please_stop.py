@@ -6,25 +6,25 @@ class Game:
         self.number = int(random.randint(1, 10))
 
     def validate(self, guess: int):
-        while True:
-            if self.guess < self.number:
-                val = '\nТвое число меньше загаданного.'
-                print(val)
-                self.mainGame()
-                break
-            elif self.guess > self.number:
-                val = '\nТвое число больше загаданного.'
-                print(val)
-                self.mainGame()
-                break
-            else:
-                val = '\nУгадал!'
-                print(val)
-                break
+          if self.guess < self.number:
+              val = '\nТвое число меньше загаданного.'
+              print(val)
+              return False
+          elif self.guess > self.number:
+              val = '\nТвое число больше загаданного.'
+              print(val)
+              return False
+          else:
+              val = '\nУгадал!'
+              print(val)
+              return True
 
     def mainGame(self):
-        self.guess = int(input('\nУгадай число между 1 и 10: \n'))
-        self.validate(self.guess)
+        print('Угадай число между 1 и 10\n')
+        while True:
+          self.guess = int(input('\nВведи число: \n'))
+          if self.validate(self.guess):
+            break
 
 
 c = Game()
