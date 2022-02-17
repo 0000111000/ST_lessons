@@ -20,10 +20,10 @@ class GAME:
             if guess < number:
                 val = '\nТвое число меньше загаданного.'
                 cls.output(val)
-            if guess > number:
+            elif guess > number:
                 val = '\nТвое число больше загаданного.'
                 cls.output(val)
-            if guess == number:
+            elif guess == number:
                 val = '\nУгадал!'
                 cls.output(val)
 
