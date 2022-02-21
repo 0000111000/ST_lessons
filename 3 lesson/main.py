@@ -34,3 +34,5 @@ class GAME2:
 
 run = GAME2()
 run.maingame()
+
+
