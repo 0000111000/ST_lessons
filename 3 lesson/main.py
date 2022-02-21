@@ -12,18 +12,19 @@ class GAME1:
 
 
     def validate(self, guess: int):
-        if self.guess < self.number:
-            val = '\nТвое число меньше загаданного.'
-            print(val)
-            return False
-        elif self.guess > self.number:
-            val = '\nТвое число больше загаданного.'
-            print(val)
-            return False
-        else:
-            val = '\nУгадал!'
-            print(val)
-            return exit(0)
+
+            if self.guess < self.number:
+                val = '\nТвое число меньше загаданного.'
+                print(val)
+                return False
+            elif self.guess > self.number:
+                val = '\nТвое число больше загаданного.'
+                print(val)
+                return False
+            else:
+                val = '\nУгадал!'
+                print(val)
+                return exit(0)
 
     def engine(self):
         if game_mode == 1:
@@ -38,10 +39,10 @@ class GAME1:
                 enter = input("\n Угадал '=', больше '>' ,меньше '<':")
                 if enter == '>':
                     self.num1 = current_num + 1
-                    GAME2.validate(self.num1)
+                    GAME2.checking(self.num1)
                 elif enter == '<':
                     self.num2 = current_num - 1
-                    GAME2.validate(self.num2)
+                    GAME2.checking(self.num2)
                 elif enter == '=':
                     print('Я угадал, твое число: ' + str(current_num))
                     return True
@@ -49,7 +50,7 @@ class GAME1:
 
 class GAME2(GAME1):
     @staticmethod
-    def validate(num):
+    def checking(num):
         if not 0 < num < 11:
             print('Обманываешь!')
             exit(0)
