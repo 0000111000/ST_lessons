@@ -57,7 +57,7 @@ class GAME2(GAME1):
             return False
 
 
-game_mode = int(input('Выбери режим игры: \n 1. Я загадываю число \n 2. Ты загадываешь число\n\n '))
+game_mode = int(input('Доступные игры: \n 1. Я загадываю число \n 2. Ты загадываешь число\n\n Ввод режима: '))
 if game_mode == 1:
     run = GAME1()
     run.engine()
