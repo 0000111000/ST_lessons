@@ -7,8 +7,7 @@ class GAME1:
         self.num2 = int(10)
         if game_mode == 1:
             self.number = int(randint(self.num1, self.num2))
-        else:
-            num = int()
+
 
 
     def validate(self, guess: int):
