@@ -12,19 +12,18 @@ class GAME1:
 
 
     def validate(self, guess: int):
-
-            if self.guess < self.number:
-                val = '\nТвое число меньше загаданного.'
-                print(val)
-                return False
-            elif self.guess > self.number:
-                val = '\nТвое число больше загаданного.'
-                print(val)
-                return False
-            else:
-                val = '\nУгадал!'
-                print(val)
-                return exit(0)
+        if self.guess < self.number:
+            val = '\nТвое число меньше загаданного.'
+            print(val)
+            return False
+        elif self.guess > self.number:
+            val = '\nТвое число больше загаданного.'
+            print(val)
+            return False
+        else:
+            val = '\nУгадал!'
+            print(val)
+            return exit(0)
 
     def engine(self):
         if game_mode == 1:
