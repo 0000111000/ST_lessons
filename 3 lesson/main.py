@@ -1,6 +1,31 @@
 from random import randint
 
 
+class GAME1:
+    def __init__(self):
+        self.number = int(randint(1, 10))
+
+    def validate(self, guess: int):
+        if self.guess < self.number:
+            val = '\nТвое число меньше загаданного.'
+            print(val)
+            return False
+        elif self.guess > self.number:
+            val = '\nТвое число больше загаданного.'
+            print(val)
+            return False
+        else:
+            val = '\nУгадал!'
+            print(val)
+            return exit(0)
+
+    def maingame(self):
+        print('Угадай число между 1 и 10!')
+        while True:
+            self.guess = int(input('Введи число:'))
+            self.validate(self.guess)
+
+
 class GAME2:
     def __init__(self):
         self.num1 = int(1)
@@ -32,7 +57,7 @@ class GAME2:
                 return True
 
 
-run = GAME2()
+run = GAME1()
 run.maingame()
 
 
